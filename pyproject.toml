@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "voice-commit"
+version = "1.0.0"
+description = "🎙️ Speak your git commits. Uses AI to generate perfect conventional commits from your voice."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Varun Ruhella" }]
+keywords = ["git", "ai", "whisper", "commit", "voice", "productivity", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.9"
+dependencies = [
+    "rich>=13.0.0",
+    "sounddevice>=0.4.6",
+    "soundfile>=0.12.1",
+    "openai>=1.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+voice-commit = "voice_commit.cli:main"
+vc = "voice_commit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/varungor365/voice-commit"
+Repository = "https://github.com/varungor365/voice-commit"

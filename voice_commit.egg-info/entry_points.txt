@@ -1,0 +1,3 @@
+[console_scripts]
+vc = voice_commit.cli:main
+voice-commit = voice_commit.cli:main

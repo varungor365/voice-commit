@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+tests/test_voice_commit.py
+voice_commit/__init__.py
+voice_commit/__main__.py
+voice_commit/ai.py
+voice_commit/audio.py
+voice_commit/cli.py
+voice_commit/git.py
+voice_commit.egg-info/PKG-INFO
+voice_commit.egg-info/SOURCES.txt
+voice_commit.egg-info/dependency_links.txt
+voice_commit.egg-info/entry_points.txt
+voice_commit.egg-info/requires.txt
+voice_commit.egg-info/top_level.txt
