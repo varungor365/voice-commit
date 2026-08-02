@@ -1,5 +1,5 @@
 import subprocess
-from typing import Optional
+
 
 def get_staged_diff() -> str:
     """Get the git diff of staged files."""

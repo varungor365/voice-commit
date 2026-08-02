@@ -1,10 +1,11 @@
-import sounddevice as sd
-import soundfile as sf
-import tempfile
-import threading
 import queue
 import sys
+import tempfile
 from pathlib import Path
+
+import sounddevice as sd
+import soundfile as sf
+
 
 class AudioRecorder:
     def __init__(self, sample_rate=16000, channels=1):

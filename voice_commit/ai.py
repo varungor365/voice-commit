@@ -1,7 +1,8 @@
 import os
-from openai import OpenAI
 from pathlib import Path
-from typing import Tuple
+
+from openai import OpenAI
+
 
 def _get_client() -> OpenAI:
     api_key = os.environ.get("OPENAI_API_KEY")

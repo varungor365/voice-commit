@@ -1,18 +1,17 @@
 import argparse
-import sys
 import os
-import time
-from dotenv import load_dotenv
+import sys
 
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.panel import Panel
-from rich.prompt import Confirm
 from rich.progress import Progress, SpinnerColumn, TextColumn
+from rich.prompt import Confirm
 
+from . import __version__
+from .ai import generate_commit_message, transcribe_audio
 from .audio import AudioRecorder
 from .git import get_staged_diff, has_staged_changes, make_commit
-from .ai import transcribe_audio, generate_commit_message
-from . import __version__
 
 console = Console()
 
@@ -24,7 +23,7 @@ def print_banner():
 def main():
     parser = argparse.ArgumentParser(description="Speak your git commits.")
     parser.add_argument("--version", action="version", version=f"voice-commit {__version__}")
-    args = parser.parse_args()
+    parser.parse_args()
 
     # Load environment variables (e.g. OPENAI_API_KEY from .env)
     load_dotenv()
@@ -85,8 +84,8 @@ def main():
         else:
             console.print("[yellow]Commit aborted.[/yellow]")
             
-    except Exception as e:
-        console.print(f"\n[red]❌ Error:[/red] {str(e)}")
+    except Exception as e:  # noqa: BLE001
+        console.print(f"\n[red]❌ Error:[/red] {e!s}")
         sys.exit(1)
     finally:
         if audio_file.exists():

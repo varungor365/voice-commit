@@ -1,9 +1,9 @@
-import pytest
-from unittest.mock import patch, MagicMock
 import unittest
 from pathlib import Path
-from voice_commit import git
-from voice_commit import ai
+from unittest.mock import MagicMock, patch
+
+from voice_commit import ai, git
+
 
 def test_has_staged_changes():
     with patch('voice_commit.git.subprocess.run') as mock_run:
