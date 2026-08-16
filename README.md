@@ -96,3 +96,11 @@ MIT © Varun Ruhella. See [LICENSE](LICENSE) for details.
 <div align="center">
 <b>⭐ Star this repo if you hate typing commit messages!</b>
 </div>
+
+## Who this is for
+
+Voice Commit is useful for developers and AI-assisted teams that want conventional commits from a staged git diff without stopping to write the summary manually. It is especially suited to small CLI workflows and teams standardizing `feat`, `fix`, and `chore` messages.
+
+## Why star this repository
+
+Star this project if it saves you time writing commit messages, or if you want to contribute providers, commit-style rules, or local transcription support.
