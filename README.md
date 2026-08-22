@@ -4,11 +4,9 @@
 
 **Speak your git commits. Uses AI to generate perfect conventional commits from your voice and code diff.**
 
-[![PyPI version](https://badge.fury.io/py/voice-commit.svg)](https://badge.fury.io/py/voice-commit)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![CI](https://github.com/varungor365/voice-commit/actions/workflows/ci.yml/badge.svg)](https://github.com/varungor365/voice-commit/actions)
-[![Downloads](https://pepy.tech/badge/voice-commit)](https://pepy.tech/project/voice-commit)
 
 <br/>
 
@@ -42,8 +40,12 @@ With **voice-commit**, you just explain what you did out loud. The AI reads your
 ## 🚀 Install
 
 ```bash
-pip install voice-commit
+git clone https://github.com/varungor365/voice-commit
+cd voice-commit
+python -m pip install -e .
 ```
+
+> `voice-commit` is currently installable from source; no PyPI release is published yet.
 
 ### Setup
 You'll need an OpenAI API key (for Whisper and GPT-4o-mini).
